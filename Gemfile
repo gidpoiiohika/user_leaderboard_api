@@ -12,6 +12,7 @@ gem "bootsnap", require: false
 gem 'whenever', require: false
 gem 'faker'
 gem 'activeadmin', github: 'activeadmin/activeadmin', branch: 'master'
+gem "sassc-rails"
 
 
 group :development do
