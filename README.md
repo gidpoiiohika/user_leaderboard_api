@@ -78,4 +78,12 @@ docker-compose run web_leaderboard rails new . --api --force --database=postgres
 docker-compose build
 docker-compose up
 ```
+* Запрос который отдает список всех мировых лидеров отсортирован по количеству заработанных очков по убыванию. 
+<img width="1440" alt="zap1" src="https://user-images.githubusercontent.com/25199412/228903910-a7b5722a-3e2a-4c41-a54d-d371475063c0.png">
+
+* Запрос который отдает список лидеров по конкретной стране. На первых местах будут те кто заработали больше всего очков.
+<img width="1440" alt="zap2" src="https://user-images.githubusercontent.com/25199412/228903980-eb2010b0-fbf5-43ce-a7ca-40a21077d378.png">
+
+
+
 
