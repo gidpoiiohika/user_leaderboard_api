@@ -1,14 +1,16 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
-require "sprockets/railtie"
+require_relative 'boot'
+
+require 'rails/all'
+require 'sprockets/railtie'
 
 Bundler.require(*Rails.groups)
 
 module UserLeaderboardApi
   class Application < Rails::Application
     config.load_defaults 7.0
-    
+
     config.middleware.use Rack::MethodOverride
     config.middleware.use ActionDispatch::Flash
     config.middleware.use ActionDispatch::Cookies
