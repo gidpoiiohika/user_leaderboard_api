@@ -58,7 +58,7 @@ The API documentation is available [here](https://planetary-crater-720583.postma
 
 What things you need to install the software and how to install them:
 
-[docker]https://docs.docker.com/)
+[docker](https://docs.docker.com/)
 
 # Installing
 
