@@ -1,24 +1,81 @@
-# README
+## Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+- GitHub
+- Ruby [3.1.2](https://github.com/gidpoiiohika/user_leaderboard_api/blob/master/Gemfile#L6)
+- Rails [7.0.4](https://github.com/gidpoiiohika/user_leaderboard_api/blob/master/Gemfile#L11)
+- PostgreSQL 
 
-* Ruby version
+# Getting Started
 
-* System dependencies
+### 1.Check your Ruby version
 
-* Configuration
+```shell
+ruby -v
+```
 
-* Database creation
+The ouput should start with something like `ruby 3.1.2`
 
-* Database initialization
+If not, install the right ruby version using [RVM](https://rvm.io/rvm/install#installing-rvm) (it could take a while):
 
-* How to run the test suite
+```shell
+rvm install 3.1.2
+rvm use ruby-3.1.2
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### 2.Clone the repository
+```shell
+git git@github.com:gidpoiiohika/user_leaderboard_api.git
+cd user_leaderboard_api
+```
 
-* Deployment instructions
+### 3.Install dependencies
 
-* ...
+Using [Bundler](https://github.com/bundler/bundler):
+
+```shell
+bundle install
+```
+* create an env file and database.yml and fill in their data, you can see it in the env and database file.example
+
+```shell
+rake db:create
+rake db:migrate
+rake create_event_and_player  # create 1_000_000 users
+rails s
+```
+
+# Getting Started Docker
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+# API documentation
+
+The API documentation is available [here](https://planetary-crater-720583.postman.co/workspace/New-Team-Workspace~f7d0f91f-3f78-4959-88d9-6f0252784ccf/request/9997411-c87a6452-5aa0-460a-987e-f91d91eac6a2)
+
+# Prerequisites
+
+What things you need to install the software and how to install them:
+
+[docker]https://docs.docker.com/)
+
+# Installing
+
+## 1. Clone the repository
+
+```shell
+git git@github.com:gidpoiiohika/user_leaderboard_api.git
+cd user_leaderboard_api
+```
+
+* create an env file and database.yml and fill in their data, you can see it in the env and database file.example
+
+## 2. Build the project
+
+```shell
+docker-compose run web_leaderboard rails new . --api --force --database=postgresql --T
+docker-compose build
+docker-compose up
+```
+
